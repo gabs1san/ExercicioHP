@@ -15,17 +15,17 @@ namespace ExercicioHP
             Console.Write("Enter the number of employess: ");
             int n = int.Parse(Console.ReadLine());
 
-            for (int i = 1; i < n; i++)
+            for (int i = 1; i <= n; i++)
             {
                 Console.WriteLine($"Emplouyee #{i} data: ");
                 Console.Write("Outsourced (Y/N)?");
-                char ch = char.Parse(Console.ReadLine());
+                char ch = char.Parse(Console.ReadLine().Trim().ToUpper());
 
                 Console.Write("Name: ");
                 string name = Console.ReadLine();
 
                 Console.Write("Hours: ");
-                int hours = int.Parse(Console.ReadLine().Trim().ToUpper());
+                int hours = int.Parse(Console.ReadLine());
 
                 Console.Write("Value per hour: ");
                 double valuePerHour = double .Parse(Console.ReadLine(), CultureInfo.InvariantCulture);

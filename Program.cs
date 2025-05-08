@@ -15,7 +15,7 @@ namespace ExercicioHP
             Console.Write("Enter the number of employess: ");
             int n = int.Parse(Console.ReadLine());
 
-            for (int i = 0; i < n; i++)
+            for (int i = 1; i < n; i++)
             {
                 Console.WriteLine($"Emplouyee #{i} data: ");
                 Console.Write("Outsourced (Y/N)?");
@@ -25,14 +25,14 @@ namespace ExercicioHP
                 string name = Console.ReadLine();
 
                 Console.Write("Hours: ");
-                int hours = int.Parse(Console.ReadLine());
+                int hours = int.Parse(Console.ReadLine().Trim().ToUpper());
 
                 Console.Write("Value per hour: ");
                 double valuePerHour = double .Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
                 if(ch == 'Y')
                 {
-                    Console.WriteLine("Additional charge: ");
+                    Console.Write("Additional charge: ");
                     double additionalCharge = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                     list.Add(new OutsourcedEmployee(name, hours, valuePerHour, additionalCharge));
                 }

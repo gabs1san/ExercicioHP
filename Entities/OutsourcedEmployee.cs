@@ -20,7 +20,7 @@ namespace ExercicioHP.Entities
 
         public override double Payment()
         {
-            return base.Payment() + 1.1 * AdditionalCharge;
+            return base.Payment() + AdditionalCharge * 1.1;
         }
     }
 }
